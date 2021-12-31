@@ -1,0 +1,50 @@
+body {
+  background-color: rgb(233, 232, 232);
+}
+
+.container {
+  margin-top: 25vh;
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 150px 150px;
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
+.item {
+  background-color: rgb(167, 158, 158);
+}
+.item1 {
+  background-color: rgb(218, 143, 143);
+}
+.item2 {
+  background-color: rgb(127, 184, 132);
+}
+
+.item3 {
+  background-color: rgb(117, 84, 112);
+}
+
+.item4 {
+  background-color: rgb(142, 153, 78);
+}
+
+.item5 {
+  background-color: rgb(75, 154, 156);
+}
+
+.item6 {
+  background-color: rgb(14, 66, 36);
+}
+
+.box {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+}
