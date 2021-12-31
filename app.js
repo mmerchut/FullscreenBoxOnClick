@@ -34,8 +34,7 @@ let bgc;
 Array.prototype.forEach.call(itemBoxes, function(element) {
   element.addEventListener('click', function() {
     
-    // console.log('data: ' + boxColors[id[element.id]]);
-    // console.log(boxColors.filter(x => x.id === `${element.id}`));
+
     boxColors.filter(x => {
       if(x.id === `${element.id}`) {
           box.style.backgroundColor = `${x.colorBox}`;
