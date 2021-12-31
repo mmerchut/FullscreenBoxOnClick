@@ -1,29 +1,30 @@
-var itemBoxes = document.getElementsByClassName('item');
+const itemBoxes = document.getElementsByClassName('item');
+const box = document.querySelector('.box')
 
 let boxColors = [
     {
       "id": "item1c",
-      "colorBox": 'background-color: rgb(218, 143, 143)'
+      "colorBox": 'rgb(218, 143, 143)'
     },
     {
       "id": "item2c",
-      "colorBox": 'background-color: rgb(127, 184, 132)'
+      "colorBox": 'rgb(127, 184, 132)'
     },
     {
         "id": "item3c",
-        "colorBox": 'background-color: rgb(117, 84, 112)'
+        "colorBox": 'rgb(117, 84, 112)'
       },
       {
         "id": "item4c",
-        "colorBox": 'background-color: rgb(142, 153, 78)'
+        "colorBox": 'rgb(142, 153, 78)'
       },
       {
         "id": "item5c",
-        "colorBox": 'background-color: rgb(75, 154, 156)'
+        "colorBox": 'rgb(75, 154, 156)'
       },
       {
         "id": "item6c",
-        "colorBox": 'background-color: rgb(14, 66, 36)'
+        "colorBox": 'rgb(14, 66, 36)'
       }
 ];
 let bgc;
@@ -36,10 +37,22 @@ Array.prototype.forEach.call(itemBoxes, function(element) {
     // console.log('data: ' + boxColors[id[element.id]]);
     // console.log(boxColors.filter(x => x.id === `${element.id}`));
     boxColors.filter(x => {
-      bgc = x.id === `${element.id}`}
-        );
-        console.log(bgc);
+      if(x.id === `${element.id}`) {
+          box.style.backgroundColor = `${x.colorBox}`;
+      }
+    });
+        lightBox();
 
   });
 });
+
+const lightBox = () => {
+    box.style.display = 'block';
+}
+
+const normalCss = () => {
+    box.style.display = 'none';
+}
+
+box.addEventListener('click', normalCss)
 
